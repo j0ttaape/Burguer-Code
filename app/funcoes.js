@@ -21,6 +21,7 @@ export function RespostadoUser(){
     return resp
 }
 
+// funcao de registro
 export function RegistroDeVenda(resp){
     console.log(`---------------------------------------------------------------\n Boa! você escolheu registrar uma venda \n Qual a posição do lanche pedido? \n--------------------------------------------------------------- `)
     let lanche = Number(ler());
@@ -34,12 +35,15 @@ export function RegistroDeVenda(resp){
         Cardapio[1].quantidade+= 1;
     }
     else if(lanche===2){
-        console.log(`Registrei a venda de um CheeseBurguer`)
+        console.log(`Registrei a venda de um Coca-Cola`)
         Cardapio[2].quantidade+= 1;
     }
     
     else if(lanche===3){
-        console.log(`Registrei a venda de um CheeseBurguer`)
+        console.log(`Registrei a venda de um HamburguerVegetariano`)
         Cardapio[3].quantidade+= 1;
     }
+    else(console.log(`Opcão Inválida, digite de novo!`))
+
 }
+
