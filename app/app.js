@@ -2,26 +2,27 @@ import * as funcoes from './funcoes.js'
 import prompt from 'prompt-sync'
 let ler = prompt();
 let opcao = 0;
-let resp;
+let resp = -1;
 
 
-while(resp!==0){
-        
-funcoes.ApresentarPrograma();
+
+
+while(resp == -1){
     
-    await funcoes.sleep(2000);
-
-console.log(`\n\n---------------------------------------------------------------\n O que iremos fazer? \n---------------------------------------------------------------\n`)
-    await funcoes.sleep(3000);    
+    funcoes.ApresentarPrograma();
+    
+    while(resp!==0){
+    
+    await funcoes.sleep(1000);
 
     resp = Number(ler());
 
-    await funcoes.sleep(2000);
+    await funcoes.sleep(1000);
 
     if(resp==1){
         funcoes.cardapio();
     }
-
+    
     else if(resp==2){
         funcoes.RegistroDeVenda(resp);
     }
@@ -30,7 +31,16 @@ console.log(`\n\n---------------------------------------------------------------
         funcoes.RemoverVenda(resp);
     }
     else if(resp==4){
-        funcoes.ListarRegistros()
+        funcoes.ListarRegistros(funcoes.Cardapio)
+        
     }
+    else if(resp==5){
+
+    }
+    else if(resp==6){
+
+    }
+    else{console.log(`Òpção inválida`)}
     
+}
 }

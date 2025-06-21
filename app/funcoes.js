@@ -1,6 +1,6 @@
 import prompt from 'prompt-sync'
 let ler = prompt();
-let Cardapio = [
+export let Cardapio = [
     {Sandubão : 12, quantidade: 0 },
     {CheeseBurgao :17.5, quantidade : 0},
     {BurgaoDuplo: 19, quantidade: 0},
@@ -21,7 +21,7 @@ export function ApresentarPrograma (){
 
 //funcao do cardapio com preço
 export async function cardapio() {
-    await sleep(2000);
+    await sleep(1000);
     console.log(`---------------------------------------------------------------\n   Opções: \n   Sandubão.......... R$12\n   CheeseBurgao.......... R$17,50\n   BurgaoDuplo.......... R$19\n   Coca-Cola.......... R$11\n   HamburguerVegetariano.......... R$15`)
 }
 
@@ -101,7 +101,8 @@ export async function RemoverVenda(resp, Cardapio){
 //Listar registros dos itens 
 
 export async function ListarRegistros(Cardapio) {
-    await sleep(3000);
+    await sleep(2000);
 
     console.log(`---------------------------------------------------------------\n   Quantidade de Sandubão = ${Cardapio[0].quantidade}\n   Quantidade de CheeseBurguer = ${Cardapio[1].quantidade}\n   Quantidade de Coca-Cola = ${Cardapio[2].quantidade}\n  Quantidade de HamburguerVegetariano = ${Cardapio[3].quantidade}\n         `)
 }
+
