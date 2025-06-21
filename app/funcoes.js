@@ -22,7 +22,7 @@ export function ApresentarPrograma (){
 //funcao do cardapio com preço
 export async function cardapio() {
     await sleep(1000);
-    console.log(`---------------------------------------------------------------\n   Opções: \n   Sandubão.......... R$12\n   CheeseBurgao.......... R$17,50\n   BurgaoDuplo.......... R$19\n   Coca-Cola.......... R$11\n   HamburguerVegetariano.......... R$15`)
+    console.log(`---------------------------------------------------------------\n   Opções: \n   0. Sandubão.......... R$12\n   1. CheeseBurgao.......... R$17,50\n   BurgaoDuplo.......... R$19\n   Coca-Cola.......... R$11\n   HamburguerVegetariano.......... R$15`)
 }
 
 // funcao de registro
